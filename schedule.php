@@ -86,8 +86,8 @@
         $phone = $_POST['telefono'];
         $idGroup = $_POST['selectGroups'];
 
-        $fecha1 = date("Y") .'-'. date("m") .'-'. date("d")+7;
-        $fecha2 = date("Y") .'-'. date("m")+1 .'-'. date("d")+7;
+        $fecha1 = date('Y-m-d', strtotime('+1 weeks'));
+        $fecha2 = date('Y-m-d', strtotime('+1 month', strtotime($fecha1)));
 
         $var_consulta= "SELECT * FROM Users WHERE idUser = $ci";
 
